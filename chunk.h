@@ -16,11 +16,12 @@ typedef struct {
     int count; // count of elements in use
     int capacity; // count of elements in array
 
-
     // a pointer to a bytecode opcode
     uint8_t* code;
 
 }Chunk;
+
+void initChunck(Chunk* chunk);
 
 
 
