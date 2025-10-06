@@ -1,4 +1,5 @@
 //module to define our code representation
+
 #ifndef clox_chunk_h
 #define clox_chunk_h
 
@@ -10,7 +11,7 @@ typedef enum{
 } OpCode; 
 
 
-// a single bytecode instruction
+// represents a block of compiled bytecode (a function, method, block, script, etc.)
 typedef struct {
 
     int count; // count of elements in use
@@ -22,7 +23,7 @@ typedef struct {
 }Chunk;
 
 void initChunck(Chunk* chunk);
-
+void writeChunk(Chunk* chunk, uint8_t byte);
 
 
 #endif 
